@@ -6,7 +6,6 @@ const greaterThanTen = num => num > 10
 
 Array.prototype.myFilter = function(func) {
     let filtered = []
-    console.log(this)
     for (let i=0; i<this.length; i++) {
         if (func(this[i], i, this)) {
             filtered.push(this[i])
