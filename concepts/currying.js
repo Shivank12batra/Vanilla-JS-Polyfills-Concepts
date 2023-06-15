@@ -30,3 +30,20 @@ function userInfo(obj) {
 
 const info = userInfo(userProfile)('age')
 console.log(info)
+
+// infinite currying
+function add(a) {
+    return function(b) {
+        if (b) return add(a+b)
+        return a
+    }
+}
+
+const sum1 = add(3)()
+const sum2 = add(3)(5)()
+const sum3 = add(3)(5)(7)(9)()
+
+
+console.log(sum1)
+console.log(sum2)
+console.log(sum3)
